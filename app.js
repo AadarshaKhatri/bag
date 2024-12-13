@@ -23,7 +23,7 @@ dotenv.config();
 const Port = 9999;
 
 app.use("/admin",AdminRouter);
-app.use("/user", UserRouter);
+app.use("/user ", UserRouter);
 app.use("/product",ProductRouter)
 
 app.listen(Port,()=>{

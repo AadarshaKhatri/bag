@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
+const config = require('config');
+const dbgr = require("debug")("development:mongoose");
+
 
 async function ConnectToDb(){
  try{
-  await mongoose.connect("mongodb://localhost:27017/User").then(()=>console.log("Connected to Database"));
+  await mongoose.connect(`${config.get("MONGO_URI")}/bag`).then(()=>dbgr("Connected to Database"));
 
  }catch(err){
-  console.log("Failed To Connect to the Database")
+  dbgr("Failed To Connect to the Database")
  }
 }
 

@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 
-router.get("/product1",(req,res)=>{
+router.get("/",(req,res)=>{
   res.send("Product Page")
 });
 

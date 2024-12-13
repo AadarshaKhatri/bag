@@ -6,9 +6,9 @@ const AdminSchema = new mongoose.Schema({
     trim:true,
     unique:true,
 
-  }, password:{
+  }, 
+  password:{
     type:String,
-    unique:String,
     trim:String,
     require:true,
   },
@@ -26,6 +26,6 @@ const AdminSchema = new mongoose.Schema({
 })
 
 
-const Admin = mongoose.model("admin",AdminSchema);
+const Admin = mongoose.model("admins",AdminSchema);
 
 module.exports = Admin
