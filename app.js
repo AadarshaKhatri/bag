@@ -23,7 +23,7 @@ app.use(flash());
 app.use(session({
   resave:false,
   saveUninitialized:false,
-  secret:"session sceret key here",
+  secret:process.env.SESSION_SECRET,
   cookie: { secure: false },
 }))
 

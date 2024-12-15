@@ -3,15 +3,20 @@ const router = express.Router();
 const isLoggedIn = require('../middleware/LogInCheck');
 
 router.get("/",isLoggedIn,(req,res)=>{
-  res.send("Index Page");
+  res.redirect("/shop")
 });
 
 
 router.get("/shop",isLoggedIn,(req,res)=>{
   res.send("This is Shop Page");
-})
+});
 
 
+if(process.env.NODE_ENV === "development"){
+  router.get("/adminShop",isLoggedIn,(req,res)=>{
+    res.send("This is admin Shop");
+  })
+}
 
 
 module.exports = router
