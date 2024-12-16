@@ -22,7 +22,7 @@ router.get("/login",(req,res)=>{
 
 router.post("/login", userLogin);
 
-router.get("/logout",isLoggedIn,(req,res)=>{
+router.post("/logout",isLoggedIn,(req,res)=>{
   res.cookie("token","");
   res.redirect('/user/login');
   

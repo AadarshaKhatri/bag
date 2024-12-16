@@ -8,7 +8,7 @@ router.get("/",isLoggedIn,(req,res)=>{
 
 
 router.get("/shop",isLoggedIn,(req,res)=>{
-  res.send("This is Shop Page");
+  res.render('shop')
 });
 
 
