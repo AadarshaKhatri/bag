@@ -7,13 +7,86 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <section>
+    <!-- Nav Bar  -->
 
-  <form method="post" action="/user/logout">
-    <button type="submit" class="text-center py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-gray-500 text-white hover:bg-gray-600 focus:outline-none focus:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none">      
-      Log Out
-     </button>
-    
-  </form>
+    <div class="flex flex-row backdrop-blur py-5 justify-between mx-10">
+      <div>
+        <h2 class="text-2xl font-bold">Shop Now.</h2>
+      </div>
+
+      <!-- Log Out Button  -->
+      <div>
+        <form method="post" action="/user/logout" class="flex justify-end">
+          <button type="submit" class="text-center py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:bg-red-600 disabled:opacity-50 disabled:pointer-events-none">      
+            Log Out
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+
+   
+    <div>
+      <div class="flex flex-row mt-5">
+
+        <!-- SideBar -->
+        <div class="w-60 h-screen">
+         <div class="w-full ml-10 flex flex-col ">
+
+        <div>
+          <!-- //Create A Drop Down menu here -->
+        </div>
+
+          
+          <div class=" flex flex-col gap-y-2">
+            <p class="text-md">New Collection</p>
+            <P class="text-md">All Products</P>
+            <p class="text-md">Discounted Products</p>
+          </div>
+
+         </div>
+        </div>
+
+        <div class="flex-1">
+
+          <div class="w-60 h-80 bg-yellow-400 flex flex-col">
+            <div class="h-80 w-full">
+              Image Here
+            </div>
+
+
+
+            <div class=" h-20 w-full bg-red-500 flex justify-between items-center">
+              <div class="m-5 flex flex-row justify-between items-center w-full">
+
+                <div class = "flex flex-col">
+                  <p>Channel Bag</p>
+                  <p>Rs 1200</p>
+                </div>
+
+                <div class="  flex flex-col items-center justify-center cursor-pointer ">
+                  <p class="p-3 bg-white/70 rounded-full">+</p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+ 
+      
+      
+    </div>
+
+  </section>
+
 
   
 </body>

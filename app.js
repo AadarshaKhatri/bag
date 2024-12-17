@@ -12,6 +12,7 @@ const IndexRouter = require("./routes/index-router");
 const flash = require('connect-flash');
 const session = require('express-session');
 
+
 app.set("view engine", "ejs");
 app.use(cookieParser());
 app.use(express.json());

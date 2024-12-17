@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const AdminModel = require("../models/admin-model");
 const generateToken = require('../utils/TokenGenerator');
 const AdminLogin = require('../controller/AdminLogIn');
-
+const isLoggedIn = require("../middleware/LogInCheck");
 
 
 
@@ -61,7 +61,18 @@ if(process.env.NODE_ENV === "development"){
   router.get('/login',(req,res)=>{
     res.render('adminLogin')
   })
-  router.post("/login",AdminLogin)
+  router.post("/login",AdminLogin);
+
+  router.post("/logout",isLoggedIn,(req,res)=>{
+    res.cookie("token","");
+    res.redirect('/admin/login');
+
+
+
+  router.post('/createProduct',(req,res)=>{
+    
+  })
+  })
 
 }
 
