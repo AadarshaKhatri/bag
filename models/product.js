@@ -1,31 +1,19 @@
 const mongoose = require('mongoose');
-const { float } = require('webidl-conversions');
+
 
 const ProductSchema = new mongoose.Schema({
-  name:{
-    type:String,
-    trim:true,
-  },
-  image:{
-    type:String,
-  },
-  price:{
-    type:float,
-  },
+  image:Buffer,
+  name:String,
+  price:Number,
   discount:{
-    type:float,
+    type:Number,
     default:0,
   },
-  bgColor:{
-    type:String,
-  },
-  panelColor:{
-    type:String,
-  },
-  textColor:{
-    type:String,
-    
-  }
-});
-
+  bgcolor:String,
+  panelColor:String,
+  textColor:String,
+})
 const Product = mongoose.model("products",ProductSchema)
+
+
+module.exports = Product;

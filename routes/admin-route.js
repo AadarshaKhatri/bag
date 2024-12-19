@@ -11,7 +11,7 @@ const isLoggedIn = require("../middleware/LogInCheck");
 
 //this routes only exists if the environment variable is set up for development. It wont be available when the environment will be set up for production/testing.
 
-if(process.env.NODE_ENV === "development"){
+// if(process.env.NODE_ENV === "development"){
 
 
   router.get("/register",(req,res)=>{
@@ -74,6 +74,6 @@ if(process.env.NODE_ENV === "development"){
   })
   })
 
-}
+// }
 
 module.exports = router;
